@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root to: "artists#index"
+  root "pages#show", page: "home"
+  get "/pages/:page" => "pages#show"
   
   resources :artists do
     resources :songs, only: [:new, :create]
