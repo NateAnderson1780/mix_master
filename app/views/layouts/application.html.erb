@@ -8,7 +8,7 @@
 </head>
 <body>
   <% if current_user %>
-    <h3>Welcome, <%= current_user.name %></h3>
+    <h3>Welcome, <%= current_user.id %></h3>
     <%= link_to "Sign out", logout_path, method: :delete %><br><br>
   <% else %>
     <%= link_to "Sign in with Spotify", "/auth/spotify" %><br><br>
